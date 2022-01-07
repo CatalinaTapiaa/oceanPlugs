@@ -1148,6 +1148,7 @@
         -webkit-appearance: none;
         border-radius: 8px;
         display: inline-block;
+        cursor: pointer;
     }
 
     .listaCategorias label {
