@@ -1101,8 +1101,7 @@
 
     /* TIENDA */
     .filtro {
-        visibility: hidden;
-        margin: 0;
+        display: none;
     }
 
     .grillaTienda {
@@ -1132,6 +1131,7 @@
     .categoriasFiltro {
         grid-area: categoriasFiltro;
         margin-top: 100px;
+        display: inline-block;
     }
 
     .listaCategorias {
@@ -1174,7 +1174,7 @@
     }
 
     .paginacion {
-        margin-top: -100px;
+        margin-top: -50px;
     }
 
     .pagFinal {
