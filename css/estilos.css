@@ -775,11 +775,16 @@
 
     /* TIENDA */
     .filtro {
-        margin: -10px 60px;
+        margin: none;
+        width: 90%;
     }
 
     .cardItemTienda {
         margin: 20px 10px;
+    }
+
+    .paginacion{
+        flex-direction: row;
     }
 
 }
