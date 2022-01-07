@@ -1278,6 +1278,10 @@
         padding: 50px 100px;
     }
 
+    .cardItemTienda {
+        margin: 20px 75px;
+    }
+
     /* NOSOTROS */
     .nosotrosPrincipal {
         height: 550px;
@@ -1407,13 +1411,30 @@
     }
 
     /* TIENDA */
+    .grillaTienda{
+        grid-template-columns: .15fr 1fr;
+    }
+
     .cardItemTienda {
         height: 395px;
-        width: 380px;
+        width: 330px;
+        margin: 20px 13px;
     }
 
     .imgDestacadoTienda {
-        width: 380px;
+        width: 330px;
+    }
+
+    .cardTienda {
+        margin: -50px 90px auto 90px;
+    }
+
+    .tituloTienda {
+        padding: 30px 100px;
+    }
+
+    .paginacion {
+        padding: 50px 105px;
     }
 
     /* CONTÁCTANOS */
@@ -1538,6 +1559,11 @@
 
     .cardItemTienda {
         margin: 20px 60px;
+        width: 380px;
+    }
+
+    .imgDestacadoTienda {
+        width: 380px;
     }
 
     /* NOSOTROS */
