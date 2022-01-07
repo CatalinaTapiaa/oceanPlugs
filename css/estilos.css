@@ -163,6 +163,7 @@
     background-blend-mode: soft-light;
     background-color: #3f3f3e3d;
     height: 200px;
+    transition: .3s;
 }
 
 .categoriaSecundaria {
@@ -172,6 +173,7 @@
     background-blend-mode: soft-light;
     background-color: #3f3f3e3d;
     height: 200px;
+    transition: .3s;
 }
 
 .categoriaTerciaria {
@@ -181,6 +183,7 @@
     background-blend-mode: soft-light;
     background-color: #3f3f3e3d;
     height: 200px;
+    transition: .3s;
 }
 
 .categoriaPrincipal:hover {
