@@ -1,0 +1,1578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* GRID INDEX */
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .01fr .54fr .4fr .5fr .0fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerIndex"
+        "video"
+        "productos"
+        "destacados"
+        "footer";
+    height: 100%;
+    width: 100%;
+    align-items: end;
+    min-height: 100vh;
+}
+
+.headerIndex {
+    grid-area: headerIndex;
+    width: 100%;
+    height: 75px;
+    line-height: 50px;
+    background-color: transparent;
+    z-index: 1030;
+    position: relative;
+}
+
+.video {
+    grid-area: video;
+}
+
+.productos {
+    grid-area: productos;
+}
+
+.destacados {
+    grid-area: destacados;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* NAVBAR */
+.navBar {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.logo {
+    width: 130px;
+    margin: 15px 20px;
+}
+
+.menu-icon {
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.navIcono {
+    width: 25px;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.navLinks {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navItems a {
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(262deg, #ff8e0091 2.73%, #FEAF01 100%);
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#menuToggle:checked~ul {
+    max-height: 350px;
+}
+
+.navItems a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* VIDEO */
+.video {
+    top: -280px;
+    position: absolute;
+    height: 10vh;
+}
+
+.videoIndex {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.tituloVideo {
+    position: absolute;
+    margin: -220px 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.tituloBold {
+    font-weight: 700;
+}
+
+.tituloLight {
+    font-weight: 350;
+}
+
+/* PRODUCTOS */
+.tituloProductos {
+    font-size: 20px;
+    margin-top: -50px;
+    border-bottom: 3px solid rgb(255 142 0);
+    width: 70px;
+    position: absolute;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "categoriaPrincipal"
+        "categoriaSecundaria"
+        "categoriaTerciaria";
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    margin: 80px 20px 10px 20px;
+}
+
+.categoriaPrincipal {
+    grid-area: categoriaPrincipal;
+    background-image: url(../img/prod-3.png);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: #3f3f3e3d;
+    height: 200px;
+}
+
+.categoriaSecundaria {
+    grid-area: categoriaSecundaria;
+    background-image: url(../img/prod-2.png);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: #3f3f3e3d;
+    height: 200px;
+}
+
+.categoriaTerciaria {
+    grid-area: categoriaTerciaria;
+    background-image: url(../img/prod-1.png);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: #3f3f3e3d;
+    height: 200px;
+}
+
+.categoriaPrincipal:hover {
+    transition: .2s;
+    background-image: url(../img/prod-3-transition.jpg);
+}
+
+.categoriaSecundaria:hover {
+    transition: .2s;
+    background-image: url(../img/prod-2-transition.jpg);
+}
+
+.categoriaTerciaria:hover {
+    transition: .2s;
+    background-image: url(../img/prod-1-transition.jpg);
+}
+
+.productos a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-weight: 500;
+    padding: 15px 20px;
+}
+
+.productos span {
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+/* DESTACADOS */
+.tituloDestacados {
+    font-size: 20px;
+    border-bottom: 3px solid rgb(255 142 0);
+    width: 70px;
+    margin: 20px 20px;
+}
+
+.cardItem {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 85vw;
+    height: 280px;
+    margin-bottom: 30px;
+}
+
+.imgDestacado {
+    width: 85vw;
+    height: 150px;
+}
+
+.cardDestacados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.descripcionDestacado {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btnSeleccionar {
+    width: 200px;
+    height: 35px;
+    background: #FF8E00;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.btnSeleccionar a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.btnSeleccionar:hover {
+    background: #FEAF01;
+}
+
+/* FOOTER */
+.footer {
+    background-image: url(../img/footer.png);
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: bottom;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.socialMedia img {
+    margin: 35px 20px;
+}
+
+.socialMedia a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 40px -10px;
+    position: absolute;
+}
+
+.footer p {
+    color: white;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+
+/* CUENTA */
+.grillaCuenta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .01fr .3fr .1fr .01fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerNaranjo"
+        "menu"
+        "bienvenidaMenu"
+        "footer";
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+
+.headerNaranjo {
+    grid-area: headerNaranjo;
+    width: 100%;
+    height: 75px;
+    line-height: 50px;
+    z-index: 1030;
+    position: relative;
+    background: linear-gradient(92deg, #FF8E00 2.73%, #FEAF01 100%);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%), 0 6px 20px 0 rgb(0 0 0 / 50%);
+}
+
+.menu {
+    grid-area: menu;
+    margin: 20px 20px;
+}
+
+.menuItems {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.menuItems a {
+    text-decoration: none;
+    color: grey;
+}
+
+.menuItems a:hover {
+    font-weight: 700;
+    color: black;
+}
+
+.imagenMenu {
+    height: 30px;
+    position: absolute;
+    margin-left: 210px;
+    width: 30px;
+}
+
+.bienvenidaMenu {
+    grid-area: bienvenidaMenu;
+}
+
+.tituloLightCuenta {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 40px 20px auto;
+}
+
+.tituloBoldCuenta {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.descripcionCuenta {
+    font-size: 18px;
+    margin: 10px 20px;
+    text-align: justify;
+}
+
+.footerCuenta {
+    position: initial;
+    margin-top: 50px;
+}
+
+/* TIENDA */
+.grillaTienda {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0.1fr 3.7fr 0fr 0fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "headerNaranjo"
+        "filtroPaginacion"
+        "cardTienda"
+        "paginacion"
+        "footer";
+    height: 100%;
+    width: 100%;
+    align-items: end;
+    min-height: 100vh;
+}
+
+.filtroPaginacion {
+    grid-area: filtroPaginacion;
+}
+
+.tituloTienda {
+    padding: 30px 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filtro {
+    background-image: url(../img/filtrar.png);
+    width: 80%;
+    height: 40px;
+    background-repeat: no-repeat;
+    margin: -10px 30px;
+    background-position-y: center;
+    background-position-x: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-indent: 50px;
+}
+
+.cardTienda {
+    grid-area: cardTienda;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.paginacion {
+    grid-area: paginacion;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    font-size: 12px;
+}
+
+.cardItemTienda {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 280px;
+    height: 380px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imgDestacadoTienda {
+    width: 280px;
+    height: 250px;
+}
+
+.footerTienda {
+    position: inherit;
+}
+
+/* NOSOTROS */
+.grillaNosotros {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr .5fr .2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerNaranjo"
+        "nosotrosPrincipal"
+        "siguenos"
+        "footer";
+    height: 100%;
+    width: 100%;
+    align-items: end;
+    min-height: 100vh;
+}
+
+.nosotrosPrincipal {
+    grid-area: nosotrosPrincipal;
+    height: 750px;
+    width: 100%;
+    background-image: url(../img/nosotros.jpg);
+    background-size: cover;
+    background-color: #2525254d;
+    background-blend-mode: soft-light;
+    background-position: center;
+}
+
+.tituloBoldNosotros {
+    padding: 20px 20px 10px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.tituloLightNosotros {
+    font-weight: 350;
+}
+
+.descripcionBold {
+    color: white;
+    font-size: 18px;
+    width: 93vw;
+    padding-left: 20px;
+    text-align: justify;
+    font-weight: 600;
+}
+
+.descripcionLight {
+    color: white;
+    font-size: 18px;
+    padding: 20px 20px;
+    font-weight: 200;
+    width: 96vw;
+    text-align: justify;
+}
+
+.btnContacto {
+    width: 240px;
+    height: 45px;
+    background: #FF8E00;
+    border: none;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnContacto a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* SIGUENOS */
+.siguenos {
+    grid-area: siguenos;
+    text-align: center;
+    margin: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.siguenos p {
+    font-size: 20px;
+}
+
+.siguenos h2 {
+    font-size: 30px;
+}
+
+.imagenNosotros {
+    width: 280px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.btnRedes {
+    background: #FF8E00;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* CONTÁCTANOS */
+.grillaContacto {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr .6fr .3fr 0.5fr .2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerNaranjo"
+        "contactoPrincipal"
+        "preguntasDesplegables"
+        "formulario"
+        "footer";
+    height: 100%;
+    width: 100%;
+    align-items: end;
+    min-height: 100vh;
+}
+
+.contactoPrincipal {
+    grid-area: contactoPrincipal;
+    height: 90vh;
+    width: 100%;
+    background-image: url(../img/contacto.png);
+    background-size: cover;
+    background-color: #2525254d;
+    background-blend-mode: soft-light;
+}
+
+.tituloContacto {
+    padding: 20px 20px 10px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.descripcionContacto {
+    color: white;
+    font-size: 18px;
+    width: 80vw;
+    padding-left: 20px;
+    font-weight: 250;
+    text-align: justify;
+}
+
+.btnRedesContacto {
+    background: #FF8E00;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.btnRedesContacto:nth-child(3) {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.preguntasDesplegables {
+    grid-area: preguntasDesplegables;
+    text-align: center;
+    padding: 20px;
+}
+
+.descripcionListas {
+    font-size: 18px;
+}
+
+.formulario {
+    grid-area: formulario;
+}
+
+.formulario p {
+    font-size: 24px;
+}
+
+.formulario input[type=text],
+.selectAsunto {
+    width: 80vw;
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+
+.formulario input::placeholder,
+.selectAsunto,
+.mensaje {
+    text-indent: 10px;
+    font-size: 18px;
+}
+
+.mensaje {
+    width: 80vw;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+.filaContacto {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnEnviar {
+    background: #FF8E00;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    margin: 10px -30px;
+}
+
+.btnEnviar:hover {
+    background: #FEAF01;
+}
+
+
+
+/* MEDIAQUERYS - MOBILEFIRST */
+
+/* EL CSS PRINCIPAL ESTÁ REALIZADO EN 320 X 480 */
+
+/* 480 X 854 NOKIA N9 */
+@media (min-width: 480px) {
+
+    /* INDEX */
+    .cardItem {
+        height: 330px;
+    }
+
+    .imgDestacado {
+        height: 200px;
+    }
+
+    /* CUENTA */
+    .imagenMenu {
+        margin-left: 350px;
+    }
+
+    .menu {
+        margin: 20px 20px;
+    }
+
+    .footerCuenta {
+        position: absolute;
+    }
+
+    /* NOSOTROS */
+    .nosotrosPrincipal {
+        height: 590px;
+    }
+
+    .imagenNosotros {
+        width: 380px;
+    }
+
+    /* CONTÁCTANOS */
+    .contactoPrincipal {
+        height: 50vh;
+    }
+}
+
+/* 600 x 960 NEXUS 7 */
+@media (min-width: 600px) {
+
+    /* INDEX */
+    .cardItem {
+        height: 390px;
+    }
+
+    .imgDestacado {
+        height: 250px;
+    }
+
+    .productos {
+        margin: 10px 20px 10px 20px;
+    }
+
+    /* CUENTA */
+    .imagenMenu {
+        margin-left: 480px;
+    }
+
+    /* TIENDA */
+    .filtro {
+        margin: -10px 60px;
+    }
+
+    .cardItemTienda {
+        margin: 20px 10px;
+    }
+
+}
+
+/* 768 x 1024 */
+@media (min-width: 768px) {
+
+    /* INDEX */
+    .logo {
+        width: 150px;
+        margin: 15px 50px;
+    }
+
+    .menu-icon {
+        right: 50px;
+    }
+
+    .tituloVideo {
+        margin: -220px 50px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "categoriaPrincipal categoriaSecundaria"
+            "categoriaPrincipal categoriaTerciaria"
+        ;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        margin: auto 50px auto 50px;
+    }
+
+    .categoriaPrincipal {
+        height: 300px;
+    }
+
+    .categoriaSecundaria,
+    .categoriaTerciaria {
+        height: 140px;
+    }
+
+    .cardItem {
+        width: 20vh;
+        height: 280px;
+    }
+
+    .imgDestacado {
+        width: 20vh;
+        height: 130px;
+    }
+
+    .cardDestacados {
+        padding: 10px 40px;
+    }
+
+    .tituloDestacados {
+        margin: 20px 50px;
+    }
+
+    .descripcionCard {
+        height: 80px;
+    }
+
+    .btnSeleccionar {
+        width: 180px;
+    }
+
+    .grilla {
+        grid-template-rows: .01fr .85fr 1fr 1fr .5fr;
+    }
+
+    .socialMedia img {
+        margin: 35px 50px;
+    }
+
+    .socialMedia a {
+        margin: 40px -30px;
+    }
+
+    .footer p {
+        padding: 40px 50px;
+    }
+
+    /* CUENTA */
+    .menu {
+        margin: 20px 50px;
+    }
+
+    .imagenMenu {
+        margin-left: 590px;
+    }
+
+    .bienvenidaMenu {
+        margin: -100px 50px;
+    }
+
+    .tituloLightCuenta {
+        position: absolute;
+        margin: 10px 20px auto;
+    }
+
+    .descripcionCuenta {
+        margin: 50px 20px;
+    }
+
+    /* TIENDA */
+    .tituloTienda {
+        padding: 30px 50px;
+    }
+
+    .filtro {
+        margin: -10px 50px;
+        width: 87%;
+    }
+
+    .paginacion {
+        padding: 30px 50px;
+    }
+
+    .cardTienda {
+        margin: auto 20px auto 20px;
+    }
+
+    /* NOSOTROS */
+    .tituloBoldNosotros {
+        padding: 60px 50px 10px 50px;
+    }
+
+    .descripcionBold {
+        padding-left: 50px;
+    }
+
+    .descripcionLight {
+        padding: 20px 50px;
+    }
+
+    .btnContacto {
+        margin-left: 50px;
+    }
+
+    /* CONTÁCTANOS */
+    .tituloContacto {
+        padding: 50px 50px 10px 50px;
+    }
+
+    .descripcionContacto {
+        padding-left: 50px;
+    }
+
+    .btnRedesContacto:nth-child(3) {
+        margin-left: 50px;
+    }
+}
+
+/* 1024 x 1366 IPAD PRO */
+@media (min-width: 1024px) {
+
+    /* INDEX */
+    .menu-icon {
+        display: none;
+    }
+
+    .headerIndex,
+    .headerNaranjo {
+        position: relative;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1030;
+    }
+
+    .logo {
+        margin: 20px auto;
+        padding-top: 20px;
+    }
+
+    .iconoCarro {
+        width: 27px;
+        margin-top: 10px;
+    }
+
+    .navLinks {
+        overflow: visible;
+        display: inline-flex;
+        justify-content: flex-end;
+        list-style-type: none;
+    }
+
+    .navItems a {
+        background: transparent;
+        margin-left: 15px;
+        padding: 10px 10px;
+    }
+
+    .descripcionCard {
+        height: 60px;
+    }
+
+    .cardItem {
+        width: 20vh;
+        height: 300px;
+        margin-bottom: auto;
+    }
+
+    .imgDestacado {
+        width: 20vh;
+        height: 150px;
+    }
+
+    /* CUENTA */
+    .grillaCuenta {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 0.05fr .35fr 0.25fr;
+        grid-auto-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "headerNaranjo headerNaranjo"
+            "menu bienvenidaMenu"
+            "footer footer";
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .menu {
+        margin: 100px 50px;
+    }
+
+    .imagenMenu {
+        margin-left: 250px;
+    }
+
+    .bienvenidaMenu {
+        margin: 100px 50px;
+    }
+
+    .tituloLightCuenta {
+        position: absolute;
+        margin: 10px 20px auto;
+    }
+
+    .descripcionCuenta {
+        margin: 50px 20px;
+    }
+
+    /* NOSOTROS */
+    .nosotrosPrincipal {
+        height: 750px;
+    }
+
+    .descripcionLight {
+        width: 55vw;
+        font-size: 20px;
+    }
+
+    .descripcionBold {
+        width: 50vw;
+        font-size: 20px;
+    }
+
+    .tituloBoldNosotros {
+        font-size: 36px;
+    }
+
+    .siguenos {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* CONTÁCTANOS */
+    .grillaContacto {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.01fr .7fr .6fr 0.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "headerNaranjo headerNaranjo"
+            "contactoPrincipal contactoPrincipal"
+            "preguntasDesplegables formulario"
+            "footer footer";
+        height: 100%;
+    }
+
+    .formulario input[type=text],
+    .selectAsunto {
+        width: 20vw;
+    }
+
+    .mensaje {
+        width: 42vw;
+    }
+
+    .filaContacto {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .descripcionContacto {
+        font-size: 20px;
+        width: 50vw;
+    }
+
+    .contactoPrincipal {
+        height: 38vh;
+    }
+
+    .formulario {
+        padding-right: 50px;
+    }
+
+    .btnEnviar {
+        position: absolute;
+        margin: -50px 330px;
+    }
+
+    .descripcionListas {
+        font-size: 20px;
+        margin-top: -200px;
+    }
+
+    /* TIENDA */
+    .filtro {
+        visibility: hidden;
+        margin: 0;
+    }
+
+    .grillaTienda {
+        display: grid;
+        grid-template-columns: .4fr 1fr;
+        grid-template-rows: .01fr .1fr 1fr .01fr .01fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "headerNaranjo headerNaranjo"
+            "categoriasFiltro filtroPaginacion"
+            "categoriasFiltro cardTienda"
+            "categoriasFiltro paginacion"
+            "footer footer";
+        height: 100%;
+        width: 100%;
+        align-items: start;
+        min-height: 100vh;
+    }
+
+    .tituloCatFiltro {
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 50px;
+    }
+
+    .categoriasFiltro {
+        grid-area: categoriasFiltro;
+        margin-top: 100px;
+    }
+
+    .listaCategorias {
+        list-style: none;
+        margin-left: 50px;
+    }
+
+    .listaCategorias input[type="checkbox"] {
+        border: 1px solid #b4b9be;
+        height: 20px;
+        margin: 6px 4px 0 0;
+        vertical-align: sub;
+        width: 20px;
+        -webkit-appearance: none;
+        border-radius: 8px;
+        display: inline-block;
+    }
+
+    .listaCategorias label {
+        font-size: 14px;
+    }
+
+    .filtroPorMedida {
+        margin-top: 20px;
+    }
+
+    .btnAplicar {
+        width: 65px;
+        height: 30px;
+        background: #FF8E00;
+        border: none;
+        margin: 10px 0 0 50px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .tituloTienda {
+        padding: 50px 50px;
+        font-size: 30px;
+    }
+
+    .paginacion {
+        margin-top: -100px;
+    }
+
+    .pagFinal {
+        margin-top: 0;
+    }
+
+    .cardTienda {
+        margin: -100px 20px auto 20px;
+    }
+
+}
+
+/* 1280 x 950 LAPTOP GENÉRICO */
+@media (min-width: 1280px) {
+
+    /* INDEX */
+    .headerIndex,
+    .headerNaranjo {
+        padding: 20px 100px;
+    }
+
+    .menu-icon {
+        right: 100px;
+    }
+
+    .tituloVideo {
+        margin: -220px 100px;
+    }
+
+    .productos {
+        margin: 50px 100px auto 100px;
+    }
+
+    .tituloDestacados {
+        margin: 20px 100px;
+    }
+
+    .cardDestacados {
+        padding: 10px 80px;
+    }
+
+    .socialMedia img {
+        margin: 35px 100px;
+    }
+
+    .socialMedia a {
+        margin: 40px -90px;
+        font-size: 20px;
+    }
+
+    .footer p {
+        padding: 40px 100px;
+        font-size: 20px;
+    }
+
+    .cardItem,
+    .imgDestacado {
+        width: 35vh;
+    }
+
+    .grilla {
+        grid-template-rows: .01fr .9fr 1fr 1fr .5fr;
+    }
+
+    /* CUENTA */
+    .menu {
+        margin-left: 100px;
+    }
+
+    .imagenMenu {
+        margin-left: 230px;
+    }
+
+    .bienvenidaMenu {
+        margin: 100px 100px auto auto;
+    }
+
+    .tituloLightCuenta {
+        font-size: 24px;
+    }
+
+    .descripcionCuenta {
+        font-size: 20px;
+    }
+
+    .menuItems {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    /* TIENDA */
+    .tituloTienda {
+        padding: 30px 100px;
+    }
+
+    .paginacion {
+        padding: 50px 100px;
+    }
+
+    /* NOSOTROS */
+    .nosotrosPrincipal {
+        height: 550px;
+    }
+
+    .imagenNosotros {
+        width: 500px;
+    }
+
+    .tituloBoldNosotros {
+        padding: 60px 100px 10px 100px;
+    }
+
+    .descripcionBold {
+        padding-left: 100px;
+    }
+
+    .descripcionLight {
+        padding: 20px 100px;
+    }
+
+    .btnContacto {
+        margin-left: 100px;
+    }
+
+    /* CONTÁCTANOS */
+    .btnEnviar {
+        margin: -50px 450px;
+    }
+
+    .tituloContacto {
+        padding: 50px 100px 10px 100px;
+    }
+
+    .descripcionContacto {
+        padding-left: 100px;
+    }
+
+    .btnRedesContacto:nth-child(3) {
+        margin-left: 100px;
+    }
+
+    .contactoPrincipal {
+        height: 45vh;
+    }
+
+    .formulario {
+        padding-right: 100px;
+    }
+
+}
+
+/* 1440 x 900 LAPTOP CON HiDPI SCREEN */
+@media (min-width: 1440px) {
+
+    /* INDEX */
+    .headerIndex,
+    .headerNaranjo {
+        height: 90px;
+    }
+
+    .videoIndex {
+        height: 750px;
+    }
+
+    .navItems a {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 200px;
+
+    }
+
+    .tituloVideo {
+        font-size: 30px;
+        margin: -280px 100px;
+    }
+
+    .tituloProductos,
+    .tituloDestacados {
+        font-size: 28px;
+    }
+
+    .productos a {
+        font-size: 24px;
+    }
+
+    .cardItem {
+        width: 40vh;
+        height: 400px;
+    }
+
+    .imgDestacado {
+        width: 40vh;
+        height: 220px;
+    }
+
+    .descripcionDestacado {
+        font-size: 24px;
+    }
+
+    .descripcionCard {
+        height: 80px;
+    }
+
+    .btnSeleccionar a {
+        font-size: 24px;
+    }
+
+    .btnSeleccionar {
+        width: 250px;
+        height: 40px;
+    }
+
+    .precio {
+        font-size: 28px;
+    }
+
+    .grilla {
+        grid-template-rows: .01fr .9fr .8fr .8fr .5fr;
+    }
+
+    /* CUENTA */
+    .logoCuenta {
+        margin-top: 30px;
+    }
+
+    /* TIENDA */
+    .cardItemTienda {
+        height: 395px;
+        width: 380px;
+    }
+
+    .imgDestacadoTienda {
+        width: 380px;
+    }
+
+    /* CONTÁCTANOS */
+    .btnEnviar {
+        margin: -50px 510px;
+    }
+
+    .mensaje {
+        width: 41.5vw;
+    }
+}
+
+/* 1920 x 1080 */
+@media (min-width: 1920px) {
+
+    /* INDEX */
+    .navItems a {
+        font-size: 24px;
+    }
+
+    .tituloVideo {
+        margin: -370px 100px;
+    }
+
+    .videoIndex {
+        height: 920px;
+    }
+
+    .categoriaSecundaria,
+    .categoriaTerciaria {
+        height: 240px;
+    }
+
+    .categoriaPrincipal {
+        height: 500px;
+    }
+
+    .cardDestacados {
+        padding: 10px 70px;
+    }
+
+    .cardItem {
+        height: 420px;
+        width: 50vh;
+    }
+
+    .imgDestacado {
+        height: 260px;
+        width: 50vh;
+    }
+
+    .grilla {
+        grid-template-rows: .13fr 1.1fr 1.2fr 1fr .5fr;
+    }
+
+    .productos a {
+        margin: 30px 40px;
+        font-size: 30px;
+    }
+
+    .navItems a {
+        padding: 20px 20px;
+    }
+
+    /* CUENTA */
+    .imagenMenu {
+        margin-left: 250px;
+    }
+
+    .menuItems {
+        width: 300px;
+        padding: 15px;
+        font-size: 24px;
+    }
+
+    .tituloLightCuenta {
+        font-size: 48px;
+    }
+
+    .descripcionCuenta {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+
+    .bienvenidaMenu {
+        margin-left: -200px;
+    }
+
+    /* TIENDA */
+    .grillaTienda{
+        align-content: space-between;
+    }
+
+    .tituloCatFiltro {
+        margin-left: 100px;
+        font-size: 20px;
+    }
+
+    .listaCategorias {
+        margin-left: 100px;
+    }
+
+    .listaCategorias label {
+        font-size: 16px;
+    }
+
+    .paginacion {
+        font-size: 16px;
+    }
+
+    .btnAplicar {
+        margin-left: 100px;
+    }
+
+    .grillaTienda {
+        grid-template-columns: .2fr 1fr;
+    }
+
+    .cardTienda {
+        margin: -40px 20px auto 20px;
+    }
+
+    .cardItemTienda {
+        margin: 20px 60px;
+    }
+
+    /* NOSOTROS */
+    .imagenNosotros {
+        width: 700px;
+        height: 450px;
+    }
+
+    .descripcionBold,
+    .descripcionLight {
+        font-size: 24px;
+    }
+
+    .btnContacto a {
+        font-size: 24px;
+    }
+
+    .siguenos p {
+        font-size: 24px;
+    }
+
+    .siguenos h2 {
+        font-size: 36px;
+    }
+
+    /* CONTÁCTANOS */
+    .btnEnviar {
+        margin: -50px 700px;
+    }
+
+    .mensaje {
+        width: 41vw;
+    }
+
+    .descripcionListas {
+        font-size: 24px;
+    }
+
+    .descripcionContacto {
+        font-size: 24px;
+    }
+
+    .tituloContacto {
+        font-size: 38px;
+    }
+}
