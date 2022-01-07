@@ -967,6 +967,32 @@
         background: transparent;
         margin-left: 15px;
         padding: 10px 10px;
+        transition: .5s;
+        width: auto;
+        position: relative;
+    }
+    /* Animación NAV */
+    .navItems a:hover{
+        color: rgba(241, 241, 241, 0.918);
+        text-decoration: none;
+    }
+
+    .navItems a::after{
+        content: "";
+        background-color: rgba(241, 241, 241, 0.918);
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s;
+    }
+
+    .navItems a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 
     .descripcionCard {
