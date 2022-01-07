@@ -405,6 +405,10 @@
     min-height: 100vh;
 }
 
+.categoriasFiltro{
+    display: none;
+}
+
 .filtroPaginacion {
     grid-area: filtroPaginacion;
 }
